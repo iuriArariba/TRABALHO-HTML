@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo do Jogo da Memória */
+.memory-game {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.memory-card {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.memory-card.revealed {
+    background-color: #4CAF50;
+}
+
+/* Estilo do Balão e Bomba */
+.balloon-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bomb {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.bomb::after {
+    content: '';
+    width: 10px;
+    height: 20px;
+    background-color: grey;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    border-radius: 2px;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    transition: width 0.2s, height 0.2s;
+}
+
+/* Estilo do botão azul */
+.check-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 20px; /* Afastar do balão */
+    margin-left: 40px; /* Aumenta o espaço à esquerda do botão azul */
+}
+
+.reset-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 20px; /* Afastar do botão azul de verificar */
+}
+
+/* Botão invisível */
+.invisible-button {
+    width: 100px; /* Largura do botão invisível */
+    height: 40px; /* Altura do botão invisível */
+    position: relative;
+    margin: 0 20px; /* Afastar do botão azul e do botão de reiniciar */
+    opacity: 0; /* Torná-lo invisível */
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Estilo para o resultado do palíndromo */
+#palindromeResult {
+    margin-top: 20px;
+    font-size: 18px;
+}

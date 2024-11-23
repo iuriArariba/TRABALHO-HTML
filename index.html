@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória e Balão com Bomba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo da Memória - Letras</h1>
+    <button onclick="startGame()">Iniciar Nova Partida</button>
+    <div class="memory-game" id="memoryGame"></div>
+
+    <h2>Balão e Bomba</h2>
+    <div class="balloon-container">
+        <div class="bomb" onclick="inflateBalloon()"></div>
+        <div class="balloon" id="balloon"></div>
+    </div>
+    <p id="message"></p>
+    
+    
+    <button id="resetButton" onclick="resetBalloon()" class="reset-button">Reiniciar Balão</button>
+    
+   
+    <button id="invisibleButton" onclick="generateError()" class="invisible-button"></button>
+    
+   
+    <button id="checkButton" onclick="checkSuccess(event)" class="check-button"> </button>
+
+   
+    <input type="text" id="palindromeInput" placeholder="Digite uma palavra">
+    <button onclick="checkPalindrome()">Verificar Palíndromo</button>
+    <p id="palindromeResult"></p>
+    
+    <p id="errorMessage" class="error-message"></p>
+    
+    <script src="script.js"></script>
+</body>
+</html>
